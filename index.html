@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Billion Studio - 數碼方案專家 | Digital Solutions Expert</title>
+    <meta name="description" content="Billion Studio 是位於英國的專業數碼方案提供商，提供健康應用、網站開發、生產力工具和數碼營銷方案。服務英國和香港市場。">
+    <meta name="keywords" content="app development, web development, digital marketing, health apps, productivity tools, UK, Hong Kong, 應用開發, 網站開發, 數碼營銷">
+    <meta name="author" content="Billion Studio">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Billion Studio - Digital Solutions Expert">
+    <meta property="og:description" content="UK-based professional digital solutions provider serving UK and Hong Kong markets">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://billionstudio.app">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Billion Studio",
+      "url": "https://billionstudio.app",
+      "description": "UK-based digital solutions provider specializing in health apps, web development, and marketing tools",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@billionstudio.app",
+        "contactType": "customer service"
+      }
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #111827;
+            --bg-card: #1a2332;
+            --accent-primary: #f59e0b;
+            --accent-secondary: #3b82f6;
+            --accent-tertiary: #ec4899;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --text-muted: #9ca3af;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --success: #10b981;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+            background: 
+                radial-gradient(circle at 20% 30%, var(--accent-primary) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, var(--accent-secondary) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, var(--accent-tertiary) 0%, transparent 50%);
+            filter: blur(80px);
+            animation: bgPulse 20s ease-in-out infinite;
+        }
+        
+        @keyframes bgPulse {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50% { opacity: 0.25; transform: scale(1.1); }
+        }
+        
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            background: rgba(10, 14, 26, 0.95);
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .lang-switch {
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-switch:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero .highlight {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .cta-button.primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+        
+        .cta-button.primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+        
+        .cta-button.secondary {
+            background: transparent;
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+        
+        .cta-button.secondary:hover {
+            background: var(--accent-primary);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        /* Section Base Styles */
+        section {
+            position: relative;
+            z-index: 10;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+        
+        /* About Section */
+        .about-section {
+            background: rgba(26, 35, 50, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+            margin: 2rem auto;
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-text p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .stat-box {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+        
+        .stat-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-icon {
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .old-feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+        }
+        
+        .service-icon {
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .service-icon svg,
+        .feature-icon svg,
+        .contact-icon svg {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .service-list li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .service-list li:before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+        }
+        
+        /* Category Filter */
+        .category-filter {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 3rem 0;
+        }
+        
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .portfolio-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .portfolio-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent-primary);
+        }
+        
+        .card-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(59, 130, 246, 0.1));
+        }
+        
+        .card-category {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .card-body {
+            padding: 0 2rem 1rem;
+        }
+        
+        .card-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            min-height: 60px;
+            line-height: 1.6;
+        }
+        
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .card-footer {
+            padding: 0 2rem 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .view-btn {
+            flex: 1;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+        }
+        
+        .view-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        .view-btn.disabled {
+            background: var(--bg-card);
+            color: var(--text-muted);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        
+        .view-btn.disabled:hover {
+            transform: none;
+        }
+        
+        /* How It Works */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 2rem;
+            background: var(--bg-card);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        
+        .process-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .process-step p {
+            color: var(--text-secondary);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: rgba(26, 35, 50, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 24px;
+            padding: 4rem 2rem;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            padding: 2rem 0;
+        }
+        
+        .contact-info h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+        }
+        
+        .contact-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item a {
+            color: var(--accent-secondary);
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: var(--bg-card);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+        
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+        }
+        
+        .form-message.success {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid var(--success);
+            color: var(--success);
+        }
+        
+        .form-message.error {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid #ef4444;
+            color: #ef4444;
+        }
+        
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 3rem auto 0;
+        }
+        
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+        
+        .faq-question:hover {
+            color: var(--accent-primary);
+        }
+        
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 10;
+            background: rgba(10, 14, 26, 0.95);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            color: var(--text-muted);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .contact-container,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Billion Studio Logo" id="logoImg">
+                </div>
+                <div class="brand-name">Billion Studio</div>
+            </div>
+            <div class="nav-links">
+                <a href="#about" data-en="About" data-zh="關於我們">關於我們</a>
+                <a href="#services" data-en="Services" data-zh="服務">服務</a>
+                <a href="#portfolio" data-en="Portfolio" data-zh="作品">作品</a>
+                <a href="#contact" data-en="Contact" data-zh="聯絡">聯絡</a>
+            </div>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button class="lang-switch" id="langSwitch">English</button>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>
+                <span class="highlight" data-en="Crafting Digital" data-zh="打造數碼">打造數碼</span><br>
+                <span data-en="Excellence" data-zh="卓越方案">卓越方案</span>
+            </h1>
+            <p data-en="UK-based professional digital solutions provider. We build innovative health apps, powerful productivity tools, and stunning websites for clients in the UK and Hong Kong." 
+               data-zh="位於英國的專業數碼方案提供商。我們為英國和香港的客戶創建創新的健康應用、強大的生產力工具和精美的網站。">
+                位於英國的專業數碼方案提供商。我們為英國和香港的客戶創建創新的健康應用、強大的生產力工具和精美的網站。
+            </p>
+            <div class="hero-cta">
+                <a href="#portfolio" class="cta-button secondary" data-en="View Our Work" data-zh="查看作品">查看作品</a>
+                <a href="#contact" class="cta-button primary" data-en="Get In Touch" data-zh="立即聯絡">立即聯絡</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <h2 class="section-title" data-en="About Billion Studio" data-zh="關於 Billion Studio">關於 Billion Studio</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-en="Billion Studio is a UK-based digital solutions provider specializing in creating practical, user-focused systems. We combine technical expertise with a deep understanding of business needs to deliver solutions that truly work." 
+                       data-zh="Billion Studio 是一家位於英國的數碼解決方案提供商，專注於創建實用、以用戶為中心的系統。我們結合技術專長和對業務需求的深入了解，提供真正有效的解決方案。">
+                        Billion Studio 是一家位於英國的數碼解決方案提供商，專注於創建實用、以用戶為中心的系統。我們結合技術專長和對業務需求的深入了解，提供真正有效的解決方案。
+                    </p>
+                    <p data-en="From health tracking applications to comprehensive web platforms, our portfolio demonstrates our versatility and commitment to quality. Each project is built with attention to detail, user experience, and long-term reliability." 
+                       data-zh="從健康追蹤應用到綜合網絡平台，我們的作品展示了多樣性和對質量的承諾。每個項目都注重細節、用戶體驗和長期可靠性。">
+                        從健康追蹤應用到綜合網絡平台，我們的作品展示了多樣性和對質量的承諾。每個項目都注重細節、用戶體驗和長期可靠性。
+                    </p>
+                    <p data-en="<svg style="display: inline; width: 1.2em; height: 1.2em;" viewBox="0 0 36 36"><path fill="#00247D" d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z"/><path fill="#CF1B2B" d="M25.14 23l9.712 6.801a3.977 3.977 0 0 0 .99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8a3.988 3.988 0 0 0-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2a3.994 3.994 0 0 0-.991 1.749L7.372 13h3.487z"/><path fill="#EEE" d="M36 21H21v10h2v-5.836L31.335 31H32a3.99 3.99 0 0 0 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9a3.983 3.983 0 0 0-1.148-2.8L25.141 13H23v-.943l9.915-6.942A4.001 4.001 0 0 0 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4a3.985 3.985 0 0 0-2.852 1.2l9.711 6.8H7.372L.157 7.949A3.968 3.968 0 0 0 0 9v.059L5.628 13H0v2h15V5h-2z"/><path fill="#CF1B2B" d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z"/></svg> Based in the UK | Serving UK & Hong Kong Markets" 
+                       data-zh="<svg style="display: inline; width: 1.2em; height: 1.2em;" viewBox="0 0 36 36"><path fill="#00247D" d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z"/><path fill="#CF1B2B" d="M25.14 23l9.712 6.801a3.977 3.977 0 0 0 .99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8a3.988 3.988 0 0 0-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2a3.994 3.994 0 0 0-.991 1.749L7.372 13h3.487z"/><path fill="#EEE" d="M36 21H21v10h2v-5.836L31.335 31H32a3.99 3.99 0 0 0 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9a3.983 3.983 0 0 0-1.148-2.8L25.141 13H23v-.943l9.915-6.942A4.001 4.001 0 0 0 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4a3.985 3.985 0 0 0-2.852 1.2l9.711 6.8H7.372L.157 7.949A3.968 3.968 0 0 0 0 9v.059L5.628 13H0v2h15V5h-2z"/><path fill="#CF1B2B" d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z"/></svg> 總部位於英國 | 服務英國和香港市場">
+                        <svg style="display: inline; width: 1.2em; height: 1.2em;" viewBox="0 0 36 36"><path fill="#00247D" d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z"/><path fill="#CF1B2B" d="M25.14 23l9.712 6.801a3.977 3.977 0 0 0 .99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8a3.988 3.988 0 0 0-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2a3.994 3.994 0 0 0-.991 1.749L7.372 13h3.487z"/><path fill="#EEE" d="M36 21H21v10h2v-5.836L31.335 31H32a3.99 3.99 0 0 0 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9a3.983 3.983 0 0 0-1.148-2.8L25.141 13H23v-.943l9.915-6.942A4.001 4.001 0 0 0 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4a3.985 3.985 0 0 0-2.852 1.2l9.711 6.8H7.372L.157 7.949A3.968 3.968 0 0 0 0 9v.059L5.628 13H0v2h15V5h-2z"/><path fill="#CF1B2B" d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z"/></svg> 總部位於英國 | 服務英國和香港市場
+                    </p>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <div class="stat-number">11+</div>
+                        <div class="stat-label" data-en="Projects Completed" data-zh="完成項目">完成項目</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label" data-en="Service Categories" data-zh="服務類別">服務類別</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label" data-en="Client Focused" data-zh="客戶為本">客戶為本</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section id="why-us">
+            <h2 class="section-title" data-en="Why Choose Billion Studio" data-zh="為什麼選擇我們">為什麼選擇我們</h2>
+            <p class="section-subtitle" data-en="We're committed to delivering solutions that work, with transparency and professionalism every step of the way." 
+               data-zh="我們致力於提供有效的解決方案，每一步都透明且專業。">
+                我們致力於提供有效的解決方案，每一步都透明且專業。
+            </p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="m9 12 2 2 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Proven Track Record" data-zh="經驗豐富">經驗豐富</h3>
+                    <p data-en="11+ completed projects across health, productivity, marketing, and web development. Every project in our portfolio is real and demo-ready." 
+                       data-zh="11+ 個完成項目，涵蓋健康、生產力、營銷和網站開發。所有作品都是真實且可試用的。">
+                        11+ 個完成項目，涵蓋健康、生產力、營銷和網站開發。所有作品都是真實且可試用的。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Data Protection" data-zh="數據保護">數據保護</h3>
+                    <p data-en="Full compliance with UK GDPR and Hong Kong PDPO. We take data security seriously with proper legal documentation and best practices." 
+                       data-zh="完全符合英國 GDPR 和香港個人資料條例。我們認真對待數據安全，配備完整的法律文件和最佳實踐。">
+                        完全符合英國 GDPR 和香港個人資料條例。我們認真對待數據安全，配備完整的法律文件和最佳實踐。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Clear Communication" data-zh="清晰溝通">清晰溝通</h3>
+                    <p data-en="Transparent development process with regular updates. We believe in honest timelines, clear pricing, and keeping you informed throughout." 
+                       data-zh="透明的開發過程，定期更新進度。我們相信誠實的時間表、清晰的定價，並在整個過程中讓您了解情況。">
+                        透明的開發過程，定期更新進度。我們相信誠實的時間表、清晰的定價，並在整個過程中讓您了解情況。
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Quality First" data-zh="質量優先">質量優先</h3>
+                    <p data-en="Every project is built with attention to detail, user experience, and long-term reliability. We don't cut corners." 
+                       data-zh="每個項目都注重細節、用戶體驗和長期可靠性。我們不會偷工減料。">
+                        每個項目都注重細節、用戶體驗和長期可靠性。我們不會偷工減料。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2 class="section-title" data-en="Our Services" data-zh="我們的服務">我們的服務</h2>
+            <p class="section-subtitle" data-en="Comprehensive digital solutions tailored to your needs" 
+               data-zh="為您需求量身定制的全面數碼解決方案">
+                為您需求量身定制的全面數碼解決方案
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                            <path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Health Applications" data-zh="健康應用">健康應用</h3>
+                    <ul class="service-list">
+                        <li data-en="Blood Pressure Tracking" data-zh="血壓追蹤系統">血壓追蹤系統</li>
+                        <li data-en="Glucose Monitoring" data-zh="血糖監測應用">血糖監測應用</li>
+                        <li data-en="Health Data Analytics" data-zh="健康數據分析">健康數據分析</li>
+                        <li data-en="Wellness Platforms" data-zh="健康管理平台">健康管理平台</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="3" rx="2"/>
+                            <path d="M8 7v7"/>
+                            <path d="M12 7v4"/>
+                            <path d="M16 7v9"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Productivity Tools" data-zh="生產力工具">生產力工具</h3>
+                    <ul class="service-list">
+                        <li data-en="Business Management Systems" data-zh="業務管理系統">業務管理系統</li>
+                        <li data-en="Accounting Solutions" data-zh="會計解決方案">會計解決方案</li>
+                        <li data-en="Domain Management" data-zh="域名管理">域名管理</li>
+                        <li data-en="Custom Workflows" data-zh="定制工作流程">定制工作流程</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18"/>
+                            <path d="m19 9-5 5-4-4-3 3"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Marketing Solutions" data-zh="營銷方案">營銷方案</h3>
+                    <ul class="service-list">
+                        <li data-en="SEO Tools & Analytics" data-zh="SEO 工具和分析">SEO 工具和分析</li>
+                        <li data-en="Social Media Integration" data-zh="社交媒體整合">社交媒體整合</li>
+                        <li data-en="Livestream Features" data-zh="直播功能">直播功能</li>
+                        <li data-en="Engagement Platforms" data-zh="互動平台">互動平台</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </div>
+                    <h3 data-en="Website Development" data-zh="網站開發">網站開發</h3>
+                    <ul class="service-list">
+                        <li data-en="Corporate Websites" data-zh="企業網站">企業網站</li>
+                        <li data-en="Educational Platforms" data-zh="教育平台">教育平台</li>
+                        <li data-en="E-commerce Solutions" data-zh="電商解決方案">電商解決方案</li>
+                        <li data-en="Custom Web Applications" data-zh="定制網絡應用">定制網絡應用</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2 class="section-title" data-en="Our Portfolio" data-zh="我們的作品">我們的作品</h2>
+            <p class="section-subtitle" data-en="Real projects, real results. Click to explore and try our live demos." 
+               data-zh="真實項目，真實成果。點擊查看並試用我們的實時演示。">
+                真實項目，真實成果。點擊查看並試用我們的實時演示。
+            </p>
+            
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all" data-en="All Projects" data-zh="全部項目">全部項目</button>
+                <button class="category-btn" data-category="Health" data-en="Health Apps" data-zh="健康應用">健康應用</button>
+                <button class="category-btn" data-category="Production" data-en="Productivity" data-zh="生產力工具">生產力工具</button>
+                <button class="category-btn" data-category="Marketing" data-en="Marketing" data-zh="數碼營銷">數碼營銷</button>
+                <button class="category-btn" data-category="Website" data-en="Websites" data-zh="網站設計">網站設計</button>
+            </div>
+            
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Cases will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="process">
+            <h2 class="section-title" data-en="How It Works" data-zh="合作流程">合作流程</h2>
+            <p class="section-subtitle" data-en="From initial consultation to final delivery, we make the process simple and transparent." 
+               data-zh="從初步諮詢到最終交付，我們讓流程簡單透明。">
+                從初步諮詢到最終交付，我們讓流程簡單透明。
+            </p>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3 data-en="Free Consultation" data-zh="免費諮詢">免費諮詢</h3>
+                    <p data-en="Contact us to discuss your needs. We'll understand your goals and provide initial recommendations." 
+                       data-zh="聯繫我們討論您的需求。我們將了解您的目標並提供初步建議。">
+                        聯繫我們討論您的需求。我們將了解您的目標並提供初步建議。
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3 data-en="Project Proposal" data-zh="項目提案">項目提案</h3>
+                    <p data-en="Receive a detailed proposal with timeline, pricing, and project scope. No hidden fees." 
+                       data-zh="收到詳細的提案，包括時間表、定價和項目範圍。沒有隱藏費用。">
+                        收到詳細的提案，包括時間表、定價和項目範圍。沒有隱藏費用。
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3 data-en="Development" data-zh="開發階段">開發階段</h3>
+                    <p data-en="Transparent development process with regular updates and opportunities for feedback." 
+                       data-zh="透明的開發過程，定期更新並提供反饋機會。">
+                        透明的開發過程，定期更新並提供反饋機會。
+                    </p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3 data-en="Delivery & Support" data-zh="交付與支援">交付與支援</h3>
+                    <p data-en="Complete testing, documentation, and handover. Plus ongoing support to ensure success." 
+                       data-zh="完整測試、文檔和交接。加上持續支援以確保成功。">
+                        完整測試、文檔和交接。加上持續支援以確保成功。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title" data-en="Get In Touch" data-zh="聯絡我們">聯絡我們</h2>
+            <p class="section-subtitle" data-en="Ready to start your project? We'd love to hear from you." 
+               data-zh="準備開始您的項目？我們期待您的聯繫。">
+                準備開始您的項目？我們期待您的聯繫。
+            </p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-en="Let's Work Together" data-zh="讓我們一起合作">讓我們一起合作</h3>
+                    <p data-en="Whether you need a health application, business website, or productivity tool, we're here to help bring your vision to life." 
+                       data-zh="無論您需要健康應用、商業網站還是生產力工具，我們都在這裡幫助您實現願景。">
+                        無論您需要健康應用、商業網站還是生產力工具，我們都在這裡幫助您實現願景。
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+                            <div>
+                                <h4 data-en="Email Us" data-zh="電郵聯繫">電郵聯繫</h4>
+                                <a href="/cdn-cgi/l/email-protection#c0a3afaeb4a1a3b480a2a9acaca9afaeb3b4b5a4a9afeea1b0b0"><span class="__cf_email__" data-cfemail="92f1fdfce6f3f1e6d2f0fbfefefbfdfce1e6e7f6fbfdbcf3e2e2">[email&#160;protected]</span></a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
+                            <div>
+                                <h4 data-en="Service Areas" data-zh="服務地區">服務地區</h4>
+                                <p data-en="United Kingdom (Primary)<br>Hong Kong" data-zh="英國（主要）<br>香港">英國（主要）<br>香港</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                            <div>
+                                <h4 data-en="Response Time" data-zh="回覆時間">回覆時間</h4>
+                                <p data-en="1-2 business days" data-zh="1-2 個工作天">1-2 個工作天</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/xgolkjaz" method="POST">
+                        <div class="form-group">
+                            <label for="name" data-en="Your Name *" data-zh="您的姓名 *">您的姓名 *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address *" data-zh="電郵地址 *">電郵地址 *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" data-en="Company Name (Optional)" data-zh="公司名稱（選填）">公司名稱（選填）</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="project-type" data-en="Project Type" data-zh="項目類型">項目類型</label>
+                            <select id="project-type" name="project-type">
+                                <option value="" data-en="Select a type" data-zh="選擇類型">選擇類型</option>
+                                <option value="health" data-en="Health Application" data-zh="健康應用">健康應用</option>
+                                <option value="productivity" data-en="Productivity Tool" data-zh="生產力工具">生產力工具</option>
+                                <option value="marketing" data-en="Marketing Solution" data-zh="營銷方案">營銷方案</option>
+                                <option value="website" data-en="Website Development" data-zh="網站開發">網站開發</option>
+                                <option value="other" data-en="Other / Not Sure" data-zh="其他/不確定">其他/不確定</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-en="Tell us about your project *" data-zh="告訴我們您的項目 *">告訴我們您的項目 *</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="form-submit" data-en="Send Message" data-zh="發送訊息">發送訊息</button>
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq">
+            <h2 class="section-title" data-en="Frequently Asked Questions" data-zh="常見問題">常見問題</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-en="Where is Billion Studio located?" data-zh="Billion Studio 在哪裡？">Billion Studio 在哪裡？</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content" data-en="We are based in the United Kingdom and serve clients in both the UK and Hong Kong markets. All our projects comply with UK GDPR and Hong Kong data protection regulations." 
+                             data-zh="我們總部位於英國，為英國和香港市場的客戶提供服務。我們所有項目都符合英國 GDPR 和香港數據保護法規。">
+                            我們總部位於英國，為英國和香港市場的客戶提供服務。我們所有項目都符合英國 GDPR 和香港數據保護法規。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-en="How do I start working with you?" data-zh="如何開始合作？">如何開始合作？</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content" data-en="Simply fill out the contact form above or email us at contact@billionstudio.app. We'll schedule a free consultation to discuss your needs and provide recommendations." 
+                             data-zh="只需填寫上方的聯絡表格或發送電郵至 contact@billionstudio.app。我們將安排免費諮詢，討論您的需求並提供建議。">
+                            只需填寫上方的聯絡表格或發送電郵至 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7c4c8c9d3c6c4d3e7c5cecbcbcec8c9d4d3d2c3cec889c6d7d7">[email&#160;protected]</a>。我們將安排免費諮詢，討論您的需求並提供建議。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-en="How long does a typical project take?" data-zh="項目通常需要多長時間？">項目通常需要多長時間？</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content" data-en="Project timelines vary depending on complexity, typically ranging from 2-12 weeks. After understanding your requirements, we'll provide a detailed timeline as part of our proposal." 
+                             data-zh="項目時間表因複雜程度而異，通常為 2-12 週。在了解您的需求後，我們將在提案中提供詳細的時間表。">
+                            項目時間表因複雜程度而異，通常為 2-12 週。在了解您的需求後，我們將在提案中提供詳細的時間表。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-en="What are your prices?" data-zh="價格如何？">價格如何？</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content" data-en="We provide custom quotes based on project requirements. Every project is different, so we tailor our pricing to match your specific needs and budget. Contact us for a free assessment." 
+                             data-zh="我們根據項目需求提供定制報價。每個項目都不同，所以我們會根據您的具體需求和預算調整定價。聯繫我們獲取免費評估。">
+                            我們根據項目需求提供定制報價。每個項目都不同，所以我們會根據您的具體需求和預算調整定價。聯繫我們獲取免費評估。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-en="Can I see examples of your work?" data-zh="可以看到實際案例嗎？">可以看到實際案例嗎？</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content" data-en="Absolutely! All projects in our portfolio are real and many include live demo links where you can try them out yourself. This demonstrates our actual capabilities, not just mockups." 
+                             data-zh="當然可以！我們作品集中的所有項目都是真實的，許多還包括實時演示連結，您可以親自試用。這展示了我們的實際能力，而不僅僅是模型。">
+                            當然可以！我們作品集中的所有項目都是真實的，許多還包括實時演示連結，您可以親自試用。這展示了我們的實際能力，而不僅僅是模型。
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-en="Do you provide ongoing support?" data-zh="提供持續支援嗎？">提供持續支援嗎？</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content" data-en="Yes! We provide post-launch support to ensure your project runs smoothly. Support packages can be tailored to your needs, from basic maintenance to ongoing development." 
+                             data-zh="是的！我們提供上線後支援，確保您的項目順利運行。支援套餐可以根據您的需求定制，從基本維護到持續開發。">
+                            是的！我們提供上線後支援，確保您的項目順利運行。支援套餐可以根據您的需求定制，從基本維護到持續開發。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Billion Studio</h3>
+                <p data-en="UK-based digital solutions provider serving clients in the UK and Hong Kong. Professional, reliable, and transparent." 
+                   data-zh="位於英國的數碼解決方案提供商，服務英國和香港客戶。專業、可靠、透明。">
+                    位於英國的數碼解決方案提供商，服務英國和香港客戶。專業、可靠、透明。
+                </p>
+                <p style="margin-top: 1rem;">
+                    <a href="/cdn-cgi/l/email-protection#ddbeb2b3a9bcbea99dbfb4b1b1b4b2b3aea9a8b9b4b2f3bcadad" style="color: var(--accent-primary); text-decoration: none;">
+                        <span class="__cf_email__" data-cfemail="d5b6babba1b4b6a195b7bcb9b9bcbabba6a1a0b1bcbafbb4a5a5">[email&#160;protected]</span>
+                    </a>
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Quick Links" data-zh="快速連結">快速連結</h3>
+                <ul class="footer-links">
+                    <li><a href="#about" data-en="About Us" data-zh="關於我們">關於我們</a></li>
+                    <li><a href="#services" data-en="Services" data-zh="服務">服務</a></li>
+                    <li><a href="#portfolio" data-en="Portfolio" data-zh="作品集">作品集</a></li>
+                    <li><a href="#contact" data-en="Contact" data-zh="聯絡">聯絡</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Services" data-zh="服務">服務</h3>
+                <ul class="footer-links">
+                    <li data-en="Health Applications" data-zh="健康應用">健康應用</li>
+                    <li data-en="Productivity Tools" data-zh="生產力工具">生產力工具</li>
+                    <li data-en="Marketing Solutions" data-zh="營銷方案">營銷方案</li>
+                    <li data-en="Website Development" data-zh="網站開發">網站開發</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Legal" data-zh="法律">法律</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html" data-en="Privacy Policy" data-zh="私隱政策">私隱政策</a></li>
+                    <li><a href="terms-of-use.html" data-en="Terms of Use" data-zh="使用條款">使用條款</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-en="© 2026 Billion Studio. All rights reserved. | UK-Based Digital Solutions Provider" 
+               data-zh="© 2026 Billion Studio。版權所有。| 位於英國的數碼方案提供商">
+                © 2026 Billion Studio。版權所有。| 位於英國的數碼方案提供商
+            </p>
+        </div>
+    </footer>
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Portfolio data
+        const portfolioData = [
+            {
+                id: 1,
+                name: { en: "Blood Pressure Tracker", zh: "血壓追蹤器" },
+                category: "Health",
+                description: { 
+                    en: "A comprehensive health app for monitoring and tracking blood pressure with detailed analytics and insights.",
+                    zh: "全面的健康應用程式，用於監測和追蹤血壓，提供詳細的分析和見解。"
+                },
+                tags: ["iOS", "Android", "Health", "Analytics"],
+                url: "" // Add your URL here
+            },
+            {
+                id: 2,
+                name: { en: "Glucose Tracker", zh: "葡萄糖追蹤器" },
+                category: "Health",
+                description: { 
+                    en: "Smart glucose monitoring solution with data visualization and personalized health recommendations.",
+                    zh: "智能葡萄糖監測方案，具有數據可視化和個性化健康建議。"
+                },
+                tags: ["iOS", "Android", "Diabetes", "AI"],
+                url: ""
+            },
+            {
+                id: 3,
+                name: { en: "Simple Books", zh: "簡易賬本" },
+                category: "Production",
+                description: { 
+                    en: "Streamlined bookkeeping and accounting tool designed for small businesses and freelancers.",
+                    zh: "專為小型企業和自由職業者設計的簡化記賬和會計工具。"
+                },
+                tags: ["Finance", "Productivity", "Business"],
+                url: ""
+            },
+            {
+                id: 4,
+                name: { en: "Domain Manager", zh: "域名管理器" },
+                category: "Production",
+                description: { 
+                    en: "Centralized platform for managing multiple domains, DNS records, and SSL certificates.",
+                    zh: "集中管理多個域名、DNS記錄和SSL證書的平台。"
+                },
+                tags: ["DevOps", "Domains", "Management"],
+                url: ""
+            },
+            {
+                id: 5,
+                name: { en: "YouTube Livestream Award", zh: "YouTube 直播獎勵" },
+                category: "Marketing",
+                description: { 
+                    en: "Interactive engagement tool for YouTube livestreams with real-time rewards and audience interaction.",
+                    zh: "YouTube直播的互動參與工具，具有即時獎勵和觀眾互動功能。"
+                },
+                tags: ["YouTube", "Engagement", "Streaming"],
+                url: ""
+            },
+            {
+                id: 6,
+                name: { en: "SEO Marketer", zh: "SEO 營銷工具" },
+                category: "Marketing",
+                description: { 
+                    en: "Comprehensive SEO analysis and optimization toolkit for improving search rankings and visibility.",
+                    zh: "全面的SEO分析和優化工具包，用於提高搜索排名和可見度。"
+                },
+                tags: ["SEO", "Analytics", "Marketing"],
+                url: ""
+            },
+            {
+                id: 7,
+                name: { en: "Melody House", zh: "美樂蒂之家" },
+                category: "Website",
+                description: { 
+                    en: "Beautiful and responsive website for a music education center with booking system.",
+                    zh: "音樂教育中心的精美響應式網站，配備預訂系統。"
+                },
+                tags: ["WordPress", "Booking", "Education"],
+                url: ""
+            },
+            {
+                id: 8,
+                name: { en: "Surrey Practical Self Defence", zh: "薩里實用自衛" },
+                category: "Website",
+                description: { 
+                    en: "Professional website for self-defense training academy with class schedules and registration.",
+                    zh: "自衛訓練學院的專業網站，包含課程時間表和註冊功能。"
+                },
+                tags: ["Training", "Registration", "CMS"],
+                url: ""
+            },
+            {
+                id: 9,
+                name: { en: "Sjögren's Syndrome Guide", zh: "修格蘭氏症候群指南" },
+                category: "Website",
+                description: { 
+                    en: "Informative medical resource website providing comprehensive information about Sjögren's Syndrome.",
+                    zh: "提供有關修格蘭氏症候群全面資訊的醫療資源網站。"
+                },
+                tags: ["Medical", "Educational", "Resource"],
+                url: ""
+            },
+            {
+                id: 10,
+                name: { en: "Premium Financing", zh: "優質融資" },
+                category: "Website",
+                description: { 
+                    en: "Professional financial services website with loan calculator and application system.",
+                    zh: "專業金融服務網站，配備貸款計算器和申請系統。"
+                },
+                tags: ["Finance", "Banking", "Calculator"],
+                url: ""
+            },
+            {
+                id: 11,
+                name: { en: "Romantic Surprise", zh: "浪漫驚喜" },
+                category: "Website",
+                description: { 
+                    en: "Creative event planning website for romantic occasions with custom packages and booking.",
+                    zh: "浪漫場合的創意活動策劃網站，提供定制套餐和預訂服務。"
+                },
+                tags: ["Events", "E-commerce", "Booking"],
+                url: ""
+            }
+        ];
+        
+        // Language state
+        let currentLang = 'zh';
+        
+        // Translation function
+        function translatePage() {
+            document.querySelectorAll('[data-en][data-zh]').forEach(elem => {
+                if (currentLang === 'en') {
+                    elem.textContent = elem.getAttribute('data-en');
+                } else {
+                    elem.textContent = elem.getAttribute('data-zh');
+                }
+            });
+        }
+        
+        // Render portfolio
+        function renderPortfolio(category = 'all') {
+            const grid = document.getElementById('portfolioGrid');
+            const filtered = category === 'all' 
+                ? portfolioData 
+                : portfolioData.filter(item => item.category === category);
+            
+            grid.innerHTML = filtered.map(item => `
+                <article class="portfolio-card" data-category="${item.category}">
+                    <div class="card-header">
+                        <span class="card-category">${item.category}</span>
+                        <h3 class="card-title">${item.name[currentLang]}</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">${item.description[currentLang]}</p>
+                        <div class="card-tags">
+                            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        ${item.url ? 
+                            `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="view-btn">
+                                🚀 ${currentLang === 'zh' ? '查看項目' : 'View Project'}
+                            </a>` : 
+                            `<span class="view-btn disabled">
+                                ${currentLang === 'zh' ? '即將推出' : 'Coming Soon'}
+                            </span>`
+                        }
+                    </div>
+                </article>
+            `).join('');
+        }
+        
+        // Event listeners
+        document.getElementById('langSwitch').addEventListener('click', function() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            this.textContent = currentLang === 'zh' ? 'English' : '中文';
+            translatePage();
+            renderPortfolio(document.querySelector('.category-btn.active').dataset.category);
+        });
+        
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                renderPortfolio(this.dataset.category);
+            });
+        });
+        
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+        
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formMessage = document.getElementById('formMessage');
+            const submitBtn = this.querySelector('.form-submit');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = currentLang === 'zh' ? '發送中...' : 'Sending...';
+            
+            try {
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = currentLang === 'zh' 
+                        ? '✓ 訊息已發送！我們將在 1-2 個工作天內回覆您。' 
+                        : '✓ Message sent! We\'ll respond within 1-2 business days.';
+                    formMessage.style.display = 'block';
+                    this.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                formMessage.className = 'form-message error';
+                formMessage.textContent = currentLang === 'zh' 
+                    ? '✗ 發送失敗，請直接發送電郵至 contact@billionstudio.app' 
+                    : '✗ Failed to send. Please email us directly at contact@billionstudio.app';
+                formMessage.style.display = 'block';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = currentLang === 'zh' ? '發送訊息' : 'Send Message';
+            }
+        });
+        
+        // Initial render
+        renderPortfolio();
+        
+        // Smooth
