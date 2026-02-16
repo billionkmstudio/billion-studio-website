@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Billion Studio - 數碼方案專家 | Digital Solutions Expert</title>
+    <meta name="description" content="Billion Studio 提供專業的健康應用、網站開發、生產力工具和數碼營銷方案。我們的作品包括血壓追蹤器、葡萄糖追蹤器、網站設計等。">
+    <meta name="keywords" content="app development, web development, digital marketing, health apps, productivity tools, 應用開發, 網站開發, 數碼營銷">
+    <meta name="author" content="Billion Studio">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Billion Studio - Digital Solutions Expert">
+    <meta property="og:description" content="專業的健康應用、網站開發、生產力工具和數碼營銷方案">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://billionstudio.app">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Billion Studio",
+      "url": "https://billionstudio.app",
+      "description": "Digital solutions provider specializing in health apps, web development, and marketing tools"
+    }
+    </script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --bg-primary: #0a0e1a;
+            --bg-secondary: #111827;
+            --bg-card: #1a2332;
+            --accent-primary: #f59e0b;
+            --accent-secondary: #3b82f6;
+            --accent-tertiary: #ec4899;
+            --text-primary: #f9fafb;
+            --text-secondary: #d1d5db;
+            --text-muted: #9ca3af;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Animated Background */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.15;
+            background: 
+                radial-gradient(circle at 20% 30%, var(--accent-primary) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, var(--accent-secondary) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, var(--accent-tertiary) 0%, transparent 50%);
+            filter: blur(80px);
+            animation: bgPulse 20s ease-in-out infinite;
+        }
+        
+        @keyframes bgPulse {
+            0%, 100% { opacity: 0.15; transform: scale(1); }
+            50% { opacity: 0.25; transform: scale(1.1); }
+        }
+        
+        /* Header */
+        header {
+            position: relative;
+            z-index: 100;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            background: rgba(10, 14, 26, 0.8);
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        
+        .lang-switch {
+            padding: 0.5rem 1rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-switch:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .hero .highlight {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(245, 158, 11, 0.4);
+        }
+        
+        /* Category Filter */
+        .category-filter {
+            position: relative;
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            z-index: 10;
+        }
+        
+        .category-btn {
+            padding: 0.8rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+        
+        /* Portfolio Grid */
+        .portfolio-section {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 3rem 2rem 6rem;
+            z-index: 10;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            text-align: center;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        .portfolio-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .portfolio-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .portfolio-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .portfolio-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            border-color: var(--accent-primary);
+        }
+        
+        .card-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(59, 130, 246, 0.1));
+        }
+        
+        .card-category {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: var(--bg-secondary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+            font-family: 'Space Mono', monospace;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        .card-body {
+            padding: 0 2rem 2rem;
+        }
+        
+        .card-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            min-height: 60px;
+        }
+        
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .tag {
+            padding: 0.3rem 0.8rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .card-footer {
+            padding: 0 2rem 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .view-btn {
+            flex: 1;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.2);
+        }
+        
+        .view-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+        
+        .view-btn.disabled {
+            background: var(--bg-card);
+            color: var(--text-muted);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        
+        .view-btn.disabled:hover {
+            transform: none;
+        }
+        
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+            background: rgba(10, 14, 26, 0.8);
+        }
+        
+        footer p {
+            color: var(--text-muted);
+        }
+        
+        footer a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--accent-secondary);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .category-filter {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+        
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            color: var(--text-secondary);
+        }
+        
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    
+    <header>
+        <nav>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.jpg" alt="Billion Studio Logo" id="logoImg">
+                </div>
+                <div class="brand-name">Billion Studio</div>
+            </div>
+            <div class="nav-actions">
+                <button class="lang-switch" id="langSwitch">English</button>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>
+                <span class="highlight" data-en="Crafting Digital" data-zh="打造數碼">打造數碼</span><br>
+                <span data-en="Excellence" data-zh="卓越方案">卓越方案</span>
+            </h1>
+            <p data-en="We build innovative health apps, powerful productivity tools, and stunning websites that drive real business results." 
+               data-zh="我們創建創新的健康應用程式、強大的生產力工具和精美的網站，為您的業務帶來真實成果。">
+                我們創建創新的健康應用程式、強大的生產力工具和精美的網站，為您的業務帶來真實成果。
+            </p>
+            <a href="#portfolio" class="cta-button" data-en="View Our Work" data-zh="查看作品">查看作品</a>
+        </section>
+        
+        <div class="category-filter">
+            <button class="category-btn active" data-category="all" data-en="All Projects" data-zh="全部項目">全部項目</button>
+            <button class="category-btn" data-category="Health" data-en="Health Apps" data-zh="健康應用">健康應用</button>
+            <button class="category-btn" data-category="Production" data-en="Productivity" data-zh="生產力工具">生產力工具</button>
+            <button class="category-btn" data-category="Marketing" data-en="Marketing" data-zh="數碼營銷">數碼營銷</button>
+            <button class="category-btn" data-category="Website" data-en="Websites" data-zh="網站設計">網站設計</button>
+        </div>
+        
+        <section class="portfolio-section" id="portfolio">
+            <h2 class="section-title" data-en="Our Portfolio" data-zh="我們的作品">我們的作品</h2>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Cases will be dynamically loaded here -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p data-en="Loading portfolio..." data-zh="載入作品中...">載入作品中...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p data-en="© 2025 Billion Studio. All rights reserved." data-zh="© 2025 Billion Studio。版權所有。">
+            © 2025 Billion Studio。版權所有。
+        </p>
+        <p>
+            <a href="/cdn-cgi/l/email-protection#284b47465c494b5c684a4144444147465b5c5d4c414706495858"><span class="__cf_email__" data-cfemail="177478796376746357757e7b7b7e7879646362737e7839766767">[email&#160;protected]</span></a>
+        </p>
+    </footer>
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Initial portfolio data
+        const portfolioData = [
+            {
+                id: 1,
+                name: { en: "Blood Pressure Tracker", zh: "血壓追蹤器" },
+                category: "Health",
+                description: { 
+                    en: "A comprehensive health app for monitoring and tracking blood pressure with detailed analytics and insights.",
+                    zh: "全面的健康應用程式，用於監測和追蹤血壓，提供詳細的分析和見解。"
+                },
+                tags: ["iOS", "Android", "Health", "Analytics"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 2,
+                name: { en: "Glucose Tracker", zh: "葡萄糖追蹤器" },
+                category: "Health",
+                description: { 
+                    en: "Smart glucose monitoring solution with data visualization and personalized health recommendations.",
+                    zh: "智能葡萄糖監測方案，具有數據可視化和個性化健康建議。"
+                },
+                tags: ["iOS", "Android", "Diabetes", "AI"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 3,
+                name: { en: "Simple Books", zh: "簡易賬本" },
+                category: "Production",
+                description: { 
+                    en: "Streamlined bookkeeping and accounting tool designed for small businesses and freelancers.",
+                    zh: "專為小型企業和自由職業者設計的簡化記賬和會計工具。"
+                },
+                tags: ["Finance", "Productivity", "Business"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 4,
+                name: { en: "Domain Manager", zh: "域名管理器" },
+                category: "Production",
+                description: { 
+                    en: "Centralized platform for managing multiple domains, DNS records, and SSL certificates.",
+                    zh: "集中管理多個域名、DNS記錄和SSL證書的平台。"
+                },
+                tags: ["DevOps", "Domains", "Management"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 5,
+                name: { en: "YouTube Livestream Award", zh: "YouTube 直播獎勵" },
+                category: "Marketing",
+                description: { 
+                    en: "Interactive engagement tool for YouTube livestreams with real-time rewards and audience interaction.",
+                    zh: "YouTube直播的互動參與工具，具有即時獎勵和觀眾互動功能。"
+                },
+                tags: ["YouTube", "Engagement", "Streaming"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 6,
+                name: { en: "SEO Marketer", zh: "SEO 營銷工具" },
+                category: "Marketing",
+                description: { 
+                    en: "Comprehensive SEO analysis and optimization toolkit for improving search rankings and visibility.",
+                    zh: "全面的SEO分析和優化工具包，用於提高搜索排名和可見度。"
+                },
+                tags: ["SEO", "Analytics", "Marketing"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 7,
+                name: { en: "Melody House", zh: "美樂蒂之家" },
+                category: "Website",
+                description: { 
+                    en: "Beautiful and responsive website for a music education center with booking system.",
+                    zh: "音樂教育中心的精美響應式網站，配備預訂系統。"
+                },
+                tags: ["WordPress", "Booking", "Education"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 8,
+                name: { en: "Surrey Practical Self Defence", zh: "薩里實用自衛" },
+                category: "Website",
+                description: { 
+                    en: "Professional website for self-defense training academy with class schedules and registration.",
+                    zh: "自衛訓練學院的專業網站，包含課程時間表和註冊功能。"
+                },
+                tags: ["Training", "Registration", "CMS"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 9,
+                name: { en: "Sjögren's Syndrome Guide", zh: "修格蘭氏症候群指南" },
+                category: "Website",
+                description: { 
+                    en: "Informative medical resource website providing comprehensive information about Sjögren's Syndrome.",
+                    zh: "提供有關修格蘭氏症候群全面資訊的醫療資源網站。"
+                },
+                tags: ["Medical", "Educational", "Resource"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 10,
+                name: { en: "Premium Financing", zh: "優質融資" },
+                category: "Website",
+                description: { 
+                    en: "Professional financial services website with loan calculator and application system.",
+                    zh: "專業金融服務網站，配備貸款計算器和申請系統。"
+                },
+                tags: ["Finance", "Banking", "Calculator"],
+                url: "" // 請添加網址
+            },
+            {
+                id: 11,
+                name: { en: "Romantic Surprise", zh: "浪漫驚喜" },
+                category: "Website",
+                description: { 
+                    en: "Creative event planning website for romantic occasions with custom packages and booking.",
+                    zh: "浪漫場合的創意活動策劃網站，提供定制套餐和預訂服務。"
+                },
+                tags: ["Events", "E-commerce", "Booking"],
+                url: "" // 請添加網址
+            }
+        ];
+        
+        // Language state
+        let currentLang = 'zh';
+        
+        // Translation function
+        function translatePage() {
+            document.querySelectorAll('[data-en][data-zh]').forEach(elem => {
+                if (currentLang === 'en') {
+                    elem.textContent = elem.getAttribute('data-en');
+                } else {
+                    elem.textContent = elem.getAttribute('data-zh');
+                }
+            });
+        }
+        
+        // Render portfolio
+        function renderPortfolio(category = 'all') {
+            const grid = document.getElementById('portfolioGrid');
+            const filtered = category === 'all' 
+                ? portfolioData 
+                : portfolioData.filter(item => item.category === category);
+            
+            grid.innerHTML = filtered.map(item => `
+                <article class="portfolio-card" data-category="${item.category}">
+                    <div class="card-header">
+                        <span class="card-category">${item.category}</span>
+                        <h3 class="card-title">${item.name[currentLang]}</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">${item.description[currentLang]}</p>
+                        <div class="card-tags">
+                            ${item.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        ${item.url ? 
+                            `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="view-btn">
+                                🚀 ${currentLang === 'zh' ? '查看項目' : 'View Project'}
+                            </a>` : 
+                            `<span class="view-btn disabled">
+                                ${currentLang === 'zh' ? '即將推出' : 'Coming Soon'}
+                            </span>`
+                        }
+                    </div>
+                </article>
+            `).join('');
+        }
+        
+        // Event listeners
+        document.getElementById('langSwitch').addEventListener('click', function() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            this.textContent = currentLang === 'zh' ? 'English' : '中文';
+            translatePage();
+            renderPortfolio(document.querySelector('.category-btn.active').dataset.category);
+        });
+        
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                renderPortfolio(this.dataset.category);
+            });
+        });
+        
+        // Initial render
+        renderPortfolio();
+        
+    
