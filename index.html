@@ -1459,126 +1459,207 @@
         // Portfolio data
         const portfolioData = [
             {
-                id: 1,
-                name: { en: "Blood Pressure Tracker", zh: "血壓追蹤器" },
-                category: "Health",
-                description: { 
-                    en: "A comprehensive health app for monitoring and tracking blood pressure with detailed analytics and insights.",
-                    zh: "全面的健康應用程式，用於監測和追蹤血壓，提供詳細的分析和見解。"
-                },
-                tags: ["iOS", "Android", "Health", "Analytics"],
-                url: "" // Add your URL here
-            },
-            {
-                id: 2,
-                name: { en: "Glucose Tracker", zh: "葡萄糖追蹤器" },
-                category: "Health",
-                description: { 
-                    en: "Smart glucose monitoring solution with data visualization and personalized health recommendations.",
-                    zh: "智能葡萄糖監測方案，具有數據可視化和個性化健康建議。"
-                },
-                tags: ["iOS", "Android", "Diabetes", "AI"],
-                url: ""
-            },
-            {
-                id: 3,
-                name: { en: "Simple Books", zh: "簡易賬本" },
-                category: "Production",
-                description: { 
-                    en: "Streamlined bookkeeping and accounting tool designed for small businesses and freelancers.",
-                    zh: "專為小型企業和自由職業者設計的簡化記賬和會計工具。"
-                },
-                tags: ["Finance", "Productivity", "Business"],
-                url: ""
-            },
-            {
-                id: 4,
-                name: { en: "Domain Manager", zh: "域名管理器" },
-                category: "Production",
-                description: { 
-                    en: "Centralized platform for managing multiple domains, DNS records, and SSL certificates.",
-                    zh: "集中管理多個域名、DNS記錄和SSL證書的平台。"
-                },
-                tags: ["DevOps", "Domains", "Management"],
-                url: ""
-            },
-            {
-                id: 5,
-                name: { en: "YouTube Livestream Award", zh: "YouTube 直播獎勵" },
-                category: "Marketing",
-                description: { 
-                    en: "Interactive engagement tool for YouTube livestreams with real-time rewards and audience interaction.",
-                    zh: "YouTube直播的互動參與工具，具有即時獎勵和觀眾互動功能。"
-                },
-                tags: ["YouTube", "Engagement", "Streaming"],
-                url: ""
-            },
-            {
-                id: 6,
-                name: { en: "SEO Marketer", zh: "SEO 營銷工具" },
-                category: "Marketing",
-                description: { 
-                    en: "Comprehensive SEO analysis and optimization toolkit for improving search rankings and visibility.",
-                    zh: "全面的SEO分析和優化工具包，用於提高搜索排名和可見度。"
-                },
-                tags: ["SEO", "Analytics", "Marketing"],
-                url: ""
-            },
-            {
-                id: 7,
-                name: { en: "Melody House", zh: "美樂蒂之家" },
-                category: "Website",
-                description: { 
-                    en: "Beautiful and responsive website for a music education center with booking system.",
-                    zh: "音樂教育中心的精美響應式網站，配備預訂系統。"
-                },
-                tags: ["WordPress", "Booking", "Education"],
-                url: ""
-            },
-            {
-                id: 8,
-                name: { en: "Surrey Practical Self Defence", zh: "薩里實用自衛" },
-                category: "Website",
-                description: { 
-                    en: "Professional website for self-defense training academy with class schedules and registration.",
-                    zh: "自衛訓練學院的專業網站，包含課程時間表和註冊功能。"
-                },
-                tags: ["Training", "Registration", "CMS"],
-                url: ""
-            },
-            {
-                id: 9,
-                name: { en: "Sjögren's Syndrome Guide", zh: "修格蘭氏症候群指南" },
-                category: "Website",
-                description: { 
-                    en: "Informative medical resource website providing comprehensive information about Sjögren's Syndrome.",
-                    zh: "提供有關修格蘭氏症候群全面資訊的醫療資源網站。"
-                },
-                tags: ["Medical", "Educational", "Resource"],
-                url: ""
-            },
-            {
-                id: 10,
-                name: { en: "Premium Financing", zh: "優質融資" },
-                category: "Website",
-                description: { 
-                    en: "Professional financial services website with loan calculator and application system.",
-                    zh: "專業金融服務網站，配備貸款計算器和申請系統。"
-                },
-                tags: ["Finance", "Banking", "Calculator"],
-                url: ""
-            },
-            {
-                id: 11,
-                name: { en: "Romantic Surprise", zh: "浪漫驚喜" },
-                category: "Website",
-                description: { 
-                    en: "Creative event planning website for romantic occasions with custom packages and booking.",
-                    zh: "浪漫場合的創意活動策劃網站，提供定制套餐和預訂服務。"
-                },
-                tags: ["Events", "E-commerce", "Booking"],
-                url: ""
-            }
+    "id": 1,
+    "name": {
+      "en": "Blood Pressure Tracker",
+      "zh": "血壓追蹤器"
+    },
+    "category": "Health",
+    "description": {
+      "en": "A comprehensive health app for monitoring and tracking blood pressure with detailed analytics and insights.",
+      "zh": "全面的健康應用程式，用於監測和追蹤血壓，提供詳細的分析和見解。"
+    },
+    "tags": [
+      "iOS",
+      "Android",
+      "Health",
+      "Analytics"
+    ],
+    "url": ""
+  },
+  {
+    "id": 2,
+    "name": {
+      "en": "Glucose Tracker",
+      "zh": "葡萄糖追蹤器"
+    },
+    "category": "Health",
+    "description": {
+      "en": "Smart glucose monitoring solution with data visualization and Records.",
+      "zh": "智能葡萄糖監測方案，具有數據可視化和數據記錄。"
+    },
+    "tags": [
+      "iOS",
+      "Android",
+      "Diabetes",
+      "Tracker"
+    ],
+    "url": "https://glucose-tracker.billionstudio.app"
+  },
+  {
+    "id": 3,
+    "name": {
+      "en": "Simple Books",
+      "zh": "簡易賬本"
+    },
+    "category": "Production",
+    "description": {
+      "en": "Streamlined bookkeeping and accounting tool designed for small businesses and freelancers.",
+      "zh": "專為小型企業和自由職業者設計的簡化記賬和會計工具。"
+    },
+    "tags": [
+      "Finance",
+      "Productivity",
+      "Business"
+    ],
+    "url": ""
+  },
+  {
+    "id": 4,
+    "name": {
+      "en": "Domain Manager",
+      "zh": "域名管理器"
+    },
+    "category": "Production",
+    "description": {
+      "en": "Centralized platform for managing multiple domains, DNS records, and SSL certificates.",
+      "zh": "集中管理多個域名、DNS記錄和SSL證書的平台。"
+    },
+    "tags": [
+      "DevOps",
+      "Domains",
+      "Management"
+    ],
+    "url": ""
+  },
+  {
+    "id": 5,
+    "name": {
+      "en": "YouTube Livestream Award",
+      "zh": "YouTube 直播獎勵"
+    },
+    "category": "Marketing",
+    "description": {
+      "en": "Interactive engagement tool for YouTube livestreams with real-time rewards and audience interaction.",
+      "zh": "YouTube直播的互動參與工具，具有即時獎勵和觀眾互動功能。"
+    },
+    "tags": [
+      "YouTube",
+      "Engagement",
+      "Streaming"
+    ],
+    "url": ""
+  },
+  {
+    "id": 6,
+    "name": {
+      "en": "SEO Marketer",
+      "zh": "SEO 營銷工具"
+    },
+    "category": "Marketing",
+    "description": {
+      "en": "Comprehensive SEO analysis and optimization toolkit for improving search rankings and visibility.",
+      "zh": "全面的SEO分析和優化工具包，用於提高搜索排名和可見度。"
+    },
+    "tags": [
+      "SEO",
+      "Analytics",
+      "Marketing"
+    ],
+    "url": "https://seo-marketer.billionstudio.app"
+  },
+  {
+    "id": 7,
+    "name": {
+      "en": "Melody House",
+      "zh": "悅音坊"
+    },
+    "category": "Website",
+    "description": {
+      "en": "Beautiful and responsive website for a music education center with booking system.",
+      "zh": "音樂教育中心的精美響應式網站，配備預訂系統。"
+    },
+    "tags": [
+      "WordPress",
+      "Booking",
+      "Education"
+    ],
+    "url": "https://melody-music.billionstudio.app"
+  },
+  {
+    "id": 8,
+    "name": {
+      "en": "Surrey Practical Self Defence",
+      "zh": "Surrey Practical Self Defence"
+    },
+    "category": "Website",
+    "description": {
+      "en": "Professional website for self-defense training academy with class schedules and registration.",
+      "zh": "自衛訓練學院的專業網站，包含課程時間表和註冊功能。"
+    },
+    "tags": [
+      "Training",
+      "Registration",
+      "Promotion"
+    ],
+    "url": "https://surreypracticalselfdefence.com"
+  },
+  {
+    "id": 9,
+    "name": {
+      "en": "Sjögren's Syndrome Guide",
+      "zh": "修格蘭氏症候群(乾燥症)指南"
+    },
+    "category": "Website",
+    "description": {
+      "en": "Informative medical resource website providing comprehensive information about Sjögren's Syndrome.",
+      "zh": "提供有關修格蘭氏症候群的全面資訊網站。"
+    },
+    "tags": [
+      "Medical",
+      "Educational",
+      "Resource",
+      "Guideline"
+    ],
+    "url": "https://sjogrens-syndrome-guide.billionstudio.app"
+  },
+  {
+    "id": 10,
+    "name": {
+      "en": "Premium Financing Calculator",
+      "zh": "保險融資計算機"
+    },
+    "category": "Website",
+    "description": {
+      "en": "Professional financial services website with loan calculator and application system.",
+      "zh": "專業金融服務網站，配備貸款計算工具和計算結果。"
+    },
+    "tags": [
+      "Finance",
+      "Banking",
+      "Calculator",
+      "Insurance"
+    ],
+    "url": "https://premium-financing.billionstudio.app"
+  },
+  {
+    "id": 11,
+    "name": {
+      "en": "Romantic Surprise",
+      "zh": "浪漫驚喜"
+    },
+    "category": "Website",
+    "description": {
+      "en": "Creative Romantic Surprise Webpage\nSpecializing in bespoke web development for your most treasured memories and life celebrations.",
+      "zh": "創意浪漫驚喜網頁\n專注於為您最珍貴的回憶和人生慶典訂製網頁開發服務。"
+    },
+    "tags": [
+      "Events",
+      "Romantic",
+      "Memories"
+    ],
+    "url": "https://romantic.billionstudio.app"
+  }
         ];
         
         // Language state
