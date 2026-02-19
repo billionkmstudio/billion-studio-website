@@ -57,6 +57,7 @@
         
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 80px;
         }
         
         body {
@@ -982,13 +983,13 @@
                 <div class="brand-name">Billion Studio</div>
             </div>
             <div class="nav-links">
-                <a href="#about" data-en="About" data-zh="關於我們">關於我們</a>
-                <a href="#services" data-en="Services" data-zh="服務">服務</a>
-                <a href="#portfolio" data-en="Portfolio" data-zh="項目">項目</a>
-                <a href="#contact" data-en="Contact" data-zh="聯絡">聯絡</a>
+                <a href="#about" data-en="About" data-zh="關於我們">About</a>
+                <a href="#services" data-en="Services" data-zh="服務">Services</a>
+                <a href="#portfolio" data-en="Portfolio" data-zh="項目">Portfolio</a>
+                <a href="#contact" data-en="Contact" data-zh="聯絡">Contact</a>
             </div>
             <div style="display: flex; gap: 1rem; align-items: center;">
-                <button class="lang-switch" id="langSwitch">English</button>
+                <button class="lang-switch" id="langSwitch">中文</button>
                 <button class="mobile-menu-btn">☰</button>
             </div>
         </nav>
@@ -1024,9 +1025,9 @@
                        data-zh="從健康追蹤應用到綜合網絡平台，我們的作品展示了多樣性和對質量的承諾。每個項目都注重細節、用戶體驗和長期可靠性。">
                         從健康追蹤應用到綜合網絡平台，我們的作品展示了多樣性和對質量的承諾。每個項目都注重細節、用戶體驗和長期可靠性。
                     </p>
-                    <p data-en="<svg style="display: inline; width: 1.2em; height: 1.2em;" viewBox="0 0 36 36"><path fill="#00247D" d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z"/><path fill="#CF1B2B" d="M25.14 23l9.712 6.801a3.977 3.977 0 0 0 .99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8a3.988 3.988 0 0 0-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2a3.994 3.994 0 0 0-.991 1.749L7.372 13h3.487z"/><path fill="#EEE" d="M36 21H21v10h2v-5.836L31.335 31H32a3.99 3.99 0 0 0 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9a3.983 3.983 0 0 0-1.148-2.8L25.141 13H23v-.943l9.915-6.942A4.001 4.001 0 0 0 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4a3.985 3.985 0 0 0-2.852 1.2l9.711 6.8H7.372L.157 7.949A3.968 3.968 0 0 0 0 9v.059L5.628 13H0v2h15V5h-2z"/><path fill="#CF1B2B" d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z"/></svg> Based in the UK | Serving UK & Hong Kong Markets" 
-                       data-zh="<svg style="display: inline; width: 1.2em; height: 1.2em;" viewBox="0 0 36 36"><path fill="#00247D" d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z"/><path fill="#CF1B2B" d="M25.14 23l9.712 6.801a3.977 3.977 0 0 0 .99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8a3.988 3.988 0 0 0-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2a3.994 3.994 0 0 0-.991 1.749L7.372 13h3.487z"/><path fill="#EEE" d="M36 21H21v10h2v-5.836L31.335 31H32a3.99 3.99 0 0 0 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9a3.983 3.983 0 0 0-1.148-2.8L25.141 13H23v-.943l9.915-6.942A4.001 4.001 0 0 0 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4a3.985 3.985 0 0 0-2.852 1.2l9.711 6.8H7.372L.157 7.949A3.968 3.968 0 0 0 0 9v.059L5.628 13H0v2h15V5h-2z"/><path fill="#CF1B2B" d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z"/></svg> 總部位於英國 | 服務英國和香港市場">
-                        <svg style="display: inline; width: 1.2em; height: 1.2em;" viewBox="0 0 36 36"><path fill="#00247D" d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z"/><path fill="#CF1B2B" d="M25.14 23l9.712 6.801a3.977 3.977 0 0 0 .99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8a3.988 3.988 0 0 0-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2a3.994 3.994 0 0 0-.991 1.749L7.372 13h3.487z"/><path fill="#EEE" d="M36 21H21v10h2v-5.836L31.335 31H32a3.99 3.99 0 0 0 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9a3.983 3.983 0 0 0-1.148-2.8L25.141 13H23v-.943l9.915-6.942A4.001 4.001 0 0 0 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4a3.985 3.985 0 0 0-2.852 1.2l9.711 6.8H7.372L.157 7.949A3.968 3.968 0 0 0 0 9v.059L5.628 13H0v2h15V5h-2z"/><path fill="#CF1B2B" d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z"/></svg> 總部位於英國 | 服務英國和香港市場
+                    <p style="display: flex; align-items: center; gap: 0.5em;">
+                        <svg style="display: inline; flex-shrink: 0; width: 1.2em; height: 1.2em;" viewBox="0 0 36 36"><path fill="#00247D" d="M0 9.059V13h5.628zM4.664 31H13v-5.837zM23 25.164V31h8.335zM0 23v3.941L5.63 23zM31.337 5H23v5.837zM36 26.942V23h-5.631zM36 13V9.059L30.371 13zM13 5H4.664L13 10.837z"/><path fill="#CF1B2B" d="M25.14 23l9.712 6.801a3.977 3.977 0 0 0 .99-1.749L28.627 23H25.14zM13 23h-2.141l-9.711 6.8c.521.53 1.189.909 1.938 1.085L13 23.943V23zm10-10h2.141l9.711-6.8a3.988 3.988 0 0 0-1.937-1.085L23 12.057V13zm-12.141 0L1.148 6.2a3.994 3.994 0 0 0-.991 1.749L7.372 13h3.487z"/><path fill="#EEE" d="M36 21H21v10h2v-5.836L31.335 31H32a3.99 3.99 0 0 0 2.852-1.199L25.14 23h3.487l7.215 5.052c.093-.337.158-.686.158-1.052v-.058L30.369 23H36v-2zM0 21v2h5.63L0 26.941V27c0 1.091.439 2.078 1.148 2.8l9.711-6.8H13v.943l-9.914 6.941c.294.07.598.116.914.116h.664L13 25.163V31h2V21H0zM36 9a3.983 3.983 0 0 0-1.148-2.8L25.141 13H23v-.943l9.915-6.942A4.001 4.001 0 0 0 32 5h-.663L23 10.837V5h-2v10h15v-2h-5.629L36 9.059V9zM13 5v5.837L4.664 5H4a3.985 3.985 0 0 0-2.852 1.2l9.711 6.8H7.372L.157 7.949A3.968 3.968 0 0 0 0 9v.059L5.628 13H0v2h15V5h-2z"/><path fill="#CF1B2B" d="M21 15V5h-6v10H0v6h15v10h6V21h15v-6z"/></svg>
+                        <span data-en="Based in the UK | Serving UK &amp; Hong Kong Markets" data-zh="總部位於英國 | 服務英國和香港市場">Based in the UK | Serving UK &amp; Hong Kong Markets</span>
                     </p>
                 </div>
                 <div class="stats-grid">
@@ -1266,14 +1267,17 @@
                             <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
                             <div>
                                 <h4 data-en="Email Us" data-zh="電郵聯繫">電郵聯繫</h4>
-                                <a href="/cdn-cgi/l/email-protection#c0a3afaeb4a1a3b480a2a9acaca9afaeb3b4b5a4a9afeea1b0b0"><span class="__cf_email__" data-cfemail="92f1fdfce6f3f1e6d2f0fbfefefbfdfce1e6e7f6fbfdbcf3e2e2">[email&#160;protected]</span></a>
+                                <a href="mailto:contact@billionstudio.app">contact@billionstudio.app</a>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div>
                             <div>
                                 <h4 data-en="Service Areas" data-zh="服務地區">服務地區</h4>
-                                <p data-en="United Kingdom (Primary)<br>Hong Kong" data-zh="英國（主要）<br>香港">英國（主要）<br>香港</p>
+                                <p>
+                                    <span data-en="United Kingdom (Primary)" data-zh="英國（主要）">United Kingdom (Primary)</span><br>
+                                    <span data-en="Hong Kong" data-zh="香港">Hong Kong</span>
+                                </p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1347,7 +1351,7 @@
                     <div class="faq-answer">
                         <div class="faq-answer-content" data-en="Simply fill out the contact form above or email us at contact@billionstudio.app. We'll schedule a free consultation to discuss your needs and provide recommendations." 
                              data-zh="只需填寫上方的聯絡表格或發送電郵至 contact@billionstudio.app。我們將安排免費諮詢，討論您的需求並提供建議。">
-                            只需填寫上方的聯絡表格或發送電郵至 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7c4c8c9d3c6c4d3e7c5cecbcbcec8c9d4d3d2c3cec889c6d7d7">[email&#160;protected]</a>。我們將安排免費諮詢，討論您的需求並提供建議。
+                            只需填寫上方的聯絡表格或發送電郵至 <a href="mailto:contact@billionstudio.app">contact@billionstudio.app</a>。我們將安排免費諮詢，討論您的需求並提供建議。
                         </div>
                     </div>
                 </div>
@@ -1411,13 +1415,13 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Billion Studio</h3>
-                <p data-en="UK-based digital solutions provider serving clients in the UK and Hong Kong. Professional, reliable, and transparent." 
-                   data-zh="位於英國的數碼解決方案提供商，服務英國和香港客戶。專業、可靠、透明。">
+                <p data-en="Digital solutions provider serving clients in the UK and Hong Kong. Professional, reliable, and transparent." 
+                   data-zh="數碼解決方案提供商，服務英國和香港客戶。專業、可靠、透明。">
                     位於英國的數碼解決方案提供商，服務英國和香港客戶。專業、可靠、透明。
                 </p>
                 <p style="margin-top: 1rem;">
-                    <a href="/cdn-cgi/l/email-protection#ddbeb2b3a9bcbea99dbfb4b1b1b4b2b3aea9a8b9b4b2f3bcadad" style="color: var(--accent-primary); text-decoration: none;">
-                        <span class="__cf_email__" data-cfemail="d5b6babba1b4b6a195b7bcb9b9bcbabba6a1a0b1bcbafbb4a5a5">[email&#160;protected]</span>
+                    <a href="mailto:contact@billionstudio.app" style="color: var(--accent-primary); text-decoration: none;">
+                        contact@billionstudio.app
                     </a>
                 </p>
             </div>
@@ -1448,14 +1452,14 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p data-en="© 2026 Billion Studio. All rights reserved. | UK-Based Digital Solutions Provider" 
-               data-zh="© 2026 Billion Studio。版權所有。| 位於英國的數碼方案提供商">
-                © 2026 Billion Studio。版權所有。| 位於英國的數碼方案提供商
+            <p data-en="© 2026 Billion Studio. All rights reserved. | Digital Solutions Provider" 
+               data-zh="© 2026 Billion Studio。版權所有。| 數碼方案提供商">
+                © 2026 Billion Studio。版權所有。| 數碼方案提供商
             </p>
         </div>
     </footer>
     
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Portfolio data
         const portfolioData = [
             {
@@ -1681,7 +1685,7 @@
         ];
         
         // Language state
-        let currentLang = 'zh';
+        let currentLang = 'en';
         
         // Translation function
         function translatePage() {
@@ -1716,7 +1720,7 @@
                     <div class="card-footer">
                         ${item.url ? 
                             `<a href="${item.url}" target="_blank" rel="noopener noreferrer" class="view-btn">
-                                🚀 ${currentLang === 'zh' ? '查看項目' : 'View Project'}
+                                ${currentLang === 'zh' ? '查看項目' : 'View Project'}
                             </a>` : 
                             `<span class="view-btn disabled">
                                 ${currentLang === 'zh' ? '即將推出' : 'Coming Soon'}
@@ -1804,6 +1808,7 @@
         });
         
         // Initial render
+        translatePage();
         renderPortfolio();
         
         // Smooth scroll for navigation
