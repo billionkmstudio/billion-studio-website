@@ -999,6 +999,7 @@
             </div>
             <div style="display: flex; gap: 1rem; align-items: center;">
                 <button class="lang-switch" id="langSwitch">中文</button>
+
                 <button class="mobile-menu-btn">☰</button>
             </div>
         </nav>
@@ -1742,7 +1743,7 @@
         
         // Event listeners
         document.getElementById('langSwitch').addEventListener('click', function() {
-            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
             this.textContent = currentLang === 'zh' ? 'English' : '中文';
             translatePage();
             renderPortfolio(document.querySelector('.category-btn.active').dataset.category);
